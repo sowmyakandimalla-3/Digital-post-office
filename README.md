@@ -11,21 +11,21 @@ This system allows users to **book parcels, track shipments, scan QR codes, acce
 ![Homepage](./1.png)
 
 ### 🎉 Parcel Booking (with confetti popup)  
-![Booking](./2.png)
+![Booking](./4.png)
 
-### 🔎 Track Parcel (Manual + QR Scan)  
-![Track Parcel](./3.png)
+### 🧭 Quick Actions Dashboard    
+![Track Parcel](./2.png)
 
-### 📷 QR Scanner  
-![QR Scanner](./4.png)
+### 📷 Booking Details  
+![QR Scanner](./3.png)
 
-### 🧭 Quick Actions Dashboard  
+### 🧭 Customer support 
 ![Quick Actions](./5.png)
 
-### 👤 User Dashboard  
+### 👤 Registration page
 ![User Dashboard](./6.png)
 
-### 🛠 Admin Dashboard  
+### 🛠 Login Dashboard  
 ![Admin Dashboard](./7.png)
 
 ---
