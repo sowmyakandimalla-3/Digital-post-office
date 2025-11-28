@@ -1,40 +1,68 @@
 # 📮 E-Post Office Management System
 
-A full-stack web application built with **MERN Stack (MongoDB, Express, React, Node.js)** that allows users to **book parcels, track shipments, scan QR codes, handle admin updates**, and manage postal services through a clean lavender-themed interface.
+A full-stack postal service platform built using **MERN Stack (MongoDB, Express.js, React.js, Node.js)**.  
+This system allows users to **book parcels, track shipments, scan QR codes, access support**, and perform **admin parcel updates** — all with a modern lavender-themed UI.
 
-![App Screenshot](./1.png)
+---
+
+## 🖼️ Application Screenshots
+
+### 🏠 Homepage  
+![Homepage](./1.png)
+
+### 🎉 Parcel Booking (with confetti popup)  
+![Booking](./2.png)
+
+### 🔎 Track Parcel (Manual + QR Scan)  
+![Track Parcel](./3.png)
+
+### 📷 QR Scanner  
+![QR Scanner](./4.png)
+
+### 🧭 Quick Actions Dashboard  
+![Quick Actions](./5.png)
+
+### 👤 User Dashboard  
+![User Dashboard](./6.png)
+
+### 🛠 Admin Dashboard  
+![Admin Dashboard](./7.png)
 
 ---
 
 ## 🚀 Features
 
-- 📦 **Book Parcels** — Create and register new parcel bookings with unique Parcel IDs  
-- 🔎 **Track Parcels** — Track using Parcel ID or **QR Code Scanner**  
-- 📷 **QR Scanner** — Live camera scanning using `html5-qrcode`  
+- 📦 **Book Parcels** — Register parcels with auto-generated Parcel IDs  
+- 🔎 **Track Parcels** — Using Parcel ID or **Live QR Scanner**  
+- 📷 **QR Code Scanner** — Camera-based instant parcel lookup  
+- 🔐 **User & Admin Login** — Role-based authentication  
+- 📨 **Admin Controls** — Update parcel status (In Transit / Delivered / Returned)  
 - 🎉 **Interactive UI** — Confetti, modals, popups, animations  
-- 🧑‍💼 **User & Admin Login** — Role-based access system  
-- 📨 **Admin Panel** — Update parcel status: In Transit / Delivered / Returned  
-- 🧭 **Quick Actions Dashboard** — Book, Track, Review, Support  
-- ☎️ **Support Popup** — India helpline with unique popup reference ID  
-- 🟣 **Lavender Interface** — Modern, responsive, visually clean  
-- 🧾 **LocalStorage + MongoDB Ready** — Works as demo or production  
+- 🧭 **Quick Actions Page** — Big buttons for core actions  
+- ☎️ **Support Popup** — India helpline + unique popup reference  
+- 🟣 **Lavender postal-themed interface**  
+- 📱 Fully responsive layout  
 
 ---
 
-## 🧰 Tech Stack
+## 🧰 Tech Stack Used
 
-| Layer      | Technology |
-|------------|------------|
-| Frontend   | React.js, React Router DOM, Axios, HTML5 QR Scanner, Canvas-Confetti, CSS |
-| Backend    | Node.js, Express.js |
-| Database   | LocalStorage (Demo) / MongoDB Atlas (Production Ready) |
-| Tools      | Git, VS Code, Railway / Render / Vercel |
+| Layer | Technologies |
+|-------|--------------|
+| **Frontend** | React.js, React Router DOM, Axios, HTML5 QR Scanner, Canvas-Confetti, CSS |
+| **Backend** | Node.js, Express.js |
+| **Database** | LocalStorage (Demo) / MongoDB Atlas (Production Ready) |
+| **Other Tools** | Git, VS Code, Railway / Render / Vercel |
 
 ---
 
-## 🖥️ How to Run Locally
+## 🖥️ Setup Instructions
 
 ```bash
+# Clone the repository
+git clone <your-repository-url>
+cd e-post-office
+
 # Backend Setup
 cd backend
 npm install
