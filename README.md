@@ -2,7 +2,7 @@
 
 A full-stack web application built with **MERN Stack (MongoDB, Express, React, Node.js)** that allows users to **book parcels, track shipments, scan QR codes, handle admin updates**, and manage postal services through a clean lavender-themed interface.
 
-![App Screenshot](./output-demo.png)
+![App Screenshot](./1.png)
 
 ---
 
