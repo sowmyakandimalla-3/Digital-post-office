@@ -1,23 +1,27 @@
 import React from "react";
-import BookingForm from "./components/BookingForm";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import BookingForm from "./BookingForm";
+import UserDashboard from "./pages/UserDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
+import QuickActions from "./pages/QuickActions";
 
-function App() {
+export default function App(){
   return (
-    <div className="app">
-      <header className="header">
-        <h1>E-Post Office Management</h1>
-        <p className="subtitle">Book and track parcels — contactless and simple</p>
-      </header>
-
-      <main className="container">
-        <BookingForm />
-      </main>
-
-      <footer className="footer">
-        <small>Built with React • Backend: Node/Express • Localhost demo</small>
-      </footer>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/book" element={<BookingForm />} />
+        <Route path="/dashboard" element={<UserDashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/dashboard/quick-actions" element={<QuickActions />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;

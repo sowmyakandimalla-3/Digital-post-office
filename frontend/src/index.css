@@ -1,71 +1,101 @@
-/* src/index.css - global styles for the app */
-
 :root{
-  --bg: #f3f6fb;
-  --card: #ffffff;
-  --muted: #6b7280;
-  --accent: #2563eb;
-  --accent-600: #1d4ed8;
-  --success: #16a34a;
-  --danger: #dc2626;
-  --shadow: 0 6px 18px rgba(15,23,42,0.06);
+  --primary:#c8a2e6;
+  --primary-dark:#9b77c4;
+  --bg:#faf7fc;
+  --card:#ffffff;
+  --muted:#6b6f6b;
+  --accent:#ffffff;
+  --glass: rgba(0,0,0,0.03);
+  --hero-text:#3b2d4f;
+  --hero-light:#e9d8ff;
+  --hero-dark:#dbc4ff;
 }
 
-*{ box-sizing: border-box; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-body{ margin:0; background:var(--bg); color:#111827; }
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
 
-/* header */
-.header{ padding:28px 24px 12px 24px; text-align:left; }
-.header h1{ margin:0; color:var(--accent); font-size:34px; }
-.header .subtitle{ margin-top:6px; color:var(--muted); }
+.header{
+  background:linear-gradient(90deg,var(--primary),var(--primary-dark));
+  color:var(--accent);
+  padding:14px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.04);
+}
 
-/* container */
-.container{ padding:24px; max-width:1100px; margin:0 auto; }
+.header img{width:48px;height:48px;border-radius:8px;object-fit:cover}
+.header h1{margin:0;font-size:20px;line-height:1;color:var(--accent)}
+.header .tag{font-size:12px;color:rgba(255,255,255,0.95)}
 
-/* layout grid */
-.booking-grid{ display:grid; gap:18px; grid-template-columns: 1fr 420px; align-items:start; }
+nav a{color:var(--accent);text-decoration:none;padding:6px 10px;border-radius:8px}
+nav a:hover{background:rgba(255,255,255,0.06)}
 
-/* card */
-.card{ background:var(--card); border-radius:10px; padding:18px; box-shadow:var(--shadow); }
-.card h2{ margin-top:0; }
+.container{max-width:1200px;margin:36px auto;padding:0 18px;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
 
-/* form */
-.form label{ display:block; margin-bottom:10px; font-size:14px; color:var(--muted); }
-.form input{ width:100%; padding:10px 12px; border:1px solid #e6e9ef; border-radius:6px; margin-top:6px; outline:none; transition:box-shadow .15s, border-color .15s; }
-.form input:focus{ box-shadow:0 6px 18px rgba(37,99,235,0.06); border-color:var(--accent-600); }
+.card{
+  background:var(--card);
+  border-radius:10px;
+  padding:22px;
+  box-shadow:0 10px 24px rgba(5,10,10,0.04);
+  border:1px solid var(--glass);
+}
 
-/* row for origin/destination */
-.form .row{ display:flex; gap:10px; }
-.form .row span{ width:50%; display:block; }
+input[type="text"], input[type="password"], select, textarea{
+  width:100%;
+  padding:10px 12px;
+  border-radius:6px;
+  border:1px solid rgba(0,0,0,0.12);
+  background:#fff;
+  margin:8px 0 16px 0;
+  font-size:14px;
+  color:#222;
+}
 
-/* actions */
-.actions{ display:flex; gap:10px; margin-top:12px; }
-.btn{ padding:8px 14px; border-radius:8px; border:1px solid #d1d5db; background:#fff; cursor:pointer; }
-.btn.primary{ background:var(--accent); color:#fff; border-color:transparent; box-shadow: 0 6px 18px rgba(37,99,235,0.12); }
-.btn:disabled{ opacity:0.6; cursor:not-allowed; }
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;border:1px solid transparent;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--primary);color:var(--accent)}
+.btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.08);color:#333}
 
-/* result area */
-.result{ margin-top:14px; padding:12px; border-radius:8px; background:#fbfdff; border:1px solid #eef2ff; }
+.section-title{font-size:28px;margin:0 0 6px 0;font-weight:800;color:var(--primary-dark)}
+.lead{font-size:15px;color:var(--muted);margin-bottom:18px}
 
-/* footer */
-.footer{ text-align:center; padding:18px; color:var(--muted); }
+.home-hero{display:flex;align-items:center;gap:18px;padding:28px;border-radius:10px;background:linear-gradient(180deg,rgba(200,162,230,0.15),rgba(200,162,230,0.05));border:1px solid rgba(155,119,196,0.08)}
 
-/* modal styles */
-.modal-overlay{ position:fixed; inset:0; background:rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; z-index:999; }
-.modal{ width:420px; max-width:92%; background:var(--card); border-radius:10px; overflow:hidden; box-shadow:var(--shadow); }
-.modal-header{ padding:12px 16px; }
-.modal-header h3{ margin:0; font-size:18px; }
-.modal-body{ padding:14px 16px; color:#111827; }
-.modal-actions{ padding:12px 16px; text-align:right; border-top:1px solid #f3f4f6; }
-.modal-success{ background: linear-gradient(90deg, rgba(16,185,129,0.12), rgba(16,185,129,0.06)); }
-.modal-error{ background: linear-gradient(90deg, rgba(239,68,68,0.08), rgba(239,68,68,0.04)); }
+.actions{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.actions .row{display:flex;gap:12px}
+.quick-card{padding:18px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbf8ff);box-shadow:0 6px 18px rgba(5,10,10,0.03)}
 
-/* type classes applied dynamically */
-.modal-success h3{ color:var(--success); }
-.modal-error h3{ color:var(--danger); }
+.footer{background:var(--primary-dark);color:var(--accent);padding:22px;text-align:center;margin-top:48px;border-top:6px solid rgba(0,0,0,0.04)}
 
-/* small screens */
-@media (max-width:880px){
-  .booking-grid{ grid-template-columns: 1fr; }
-  .form .row{ flex-direction:column; }
+.hero-section{
+  background: linear-gradient(180deg,var(--hero-light),var(--hero-dark));
+  color:var(--hero-text);
+  padding:72px 0 88px;
+  text-align:center;
+}
+
+.hero-inner{max-width:1100px;margin:0 auto;padding:0 18px}
+
+.hero-brand{
+  display:flex;align-items:center;gap:12px;justify-content:space-between;
+}
+
+.hero-cta{margin-top:26px;display:flex;gap:14px;justify-content:center}
+
+.hero-cta .btn-primary{background:#6d4fa3;color:#fff;border-radius:28px;padding:12px 20px;font-weight:700}
+.hero-cta .btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.18);color:var(--hero-text);border-radius:28px;padding:12px 20px}
+
+@media (max-width:980px){
+  .container{grid-template-columns:1fr; padding:18px}
+  .hero-inner{padding:0 12px}
+  .hero-brand{flex-direction:column;align-items:flex-start}
 }

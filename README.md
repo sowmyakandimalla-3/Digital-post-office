@@ -1,38 +1,46 @@
 # 📮 E-Post Office Management System
 
-A full-stack web application built with **MERN Stack (MongoDB, Express, React, Node.js)** that allows users to book, track, and manage postal parcels in real time.
+A full-stack web application built with **MERN Stack (MongoDB, Express, React, Node.js)** that allows users to **book parcels, track shipments, scan QR codes, handle admin updates**, and manage postal services through a clean lavender-themed interface.
 
 ![App Screenshot](./output-demo.png)
 
 ---
 
 ## 🚀 Features
-- 📦 **Book Parcels** — Create and register new postal bookings  
-- 🔎 **Track Parcels** — View current parcel status and timestamps  
-- 🔔 **Live Updates** — Real-time notifications via **Socket.IO**  
-- 🎉 **Interactive UI** — Popups, confetti, and QR codes for parcel sharing  
-- 🧾 **Database** — MongoDB Atlas for secure data storage
+
+- 📦 **Book Parcels** — Create and register new parcel bookings with unique Parcel IDs  
+- 🔎 **Track Parcels** — Track using Parcel ID or **QR Code Scanner**  
+- 📷 **QR Scanner** — Live camera scanning using `html5-qrcode`  
+- 🎉 **Interactive UI** — Confetti, modals, popups, animations  
+- 🧑‍💼 **User & Admin Login** — Role-based access system  
+- 📨 **Admin Panel** — Update parcel status: In Transit / Delivered / Returned  
+- 🧭 **Quick Actions Dashboard** — Book, Track, Review, Support  
+- ☎️ **Support Popup** — India helpline with unique popup reference ID  
+- 🟣 **Lavender Interface** — Modern, responsive, visually clean  
+- 🧾 **LocalStorage + MongoDB Ready** — Works as demo or production  
 
 ---
 
 ## 🧰 Tech Stack
-| Layer | Technology |
-|--------|-------------|
-| Frontend | React.js, Axios, Toastify, CSS |
-| Backend | Node.js, Express.js, Socket.IO |
-| Database | MongoDB Atlas |
-| Tools | Git, VS Code, Render (for deployment) |
+
+| Layer      | Technology |
+|------------|------------|
+| Frontend   | React.js, React Router DOM, Axios, HTML5 QR Scanner, Canvas-Confetti, CSS |
+| Backend    | Node.js, Express.js |
+| Database   | LocalStorage (Demo) / MongoDB Atlas (Production Ready) |
+| Tools      | Git, VS Code, Railway / Render / Vercel |
 
 ---
 
 ## 🖥️ How to Run Locally
+
 ```bash
-# Backend
+# Backend Setup
 cd backend
 npm install
 npm run dev
 
-# Frontend
+# Frontend Setup
 cd ../frontend
 npm install
 npm start
